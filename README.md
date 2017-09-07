@@ -6,7 +6,7 @@
 
 ## Image Detection
 
-* [You Only Look Once: Unified, Real-Time Object Detection](https://pjreddie.com/media/files/papers/yolo.pdf)
+* [You Only Look Once: Unified, Real-Time Object Detection](https://pjreddie.com/media/files/papers/yolo.pdf) [[note](/paper/YOLO.md)]
 
 
 
