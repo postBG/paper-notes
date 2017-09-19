@@ -13,7 +13,7 @@
 #### 2017 Sep.
 
 * [You Only Look Once: Unified, Real-Time Object Detection](https://pjreddie.com/media/files/papers/yolo.pdf) [[note](/notes/YOLO.md)]
-* [Generative Adversarial Networks](https://arxiv.org/pdf/1406.2661.pdf)[[note](/notes/GAN.md)]
+* [Generative Adversarial Networks](https://arxiv.org/pdf/1406.2661.pdf) [[note](/notes/GAN.md)]
 
 
 #### 2017 Jul.
