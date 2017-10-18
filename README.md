@@ -10,6 +10,9 @@
 - [A Tutorial on Deep Learning for Music Information Retrieval](https://arxiv.org/pdf/1709.04396.pdf)
 
 
+#### 2017 Oct.
+
+* [Training Deep Neural Networks on Imbalanced Data Sets](https://www-staff.it.uts.edu.au/~lbcao/publication/IJCNN15.wang.final.pdf)
 
 #### 2017 Sep.
 
