@@ -10,15 +10,22 @@
 - [A Tutorial on Deep Learning for Music Information Retrieval](https://arxiv.org/pdf/1709.04396.pdf)
 
 
+
+
 #### 2017 Oct.
 
 * [Training Deep Neural Networks on Imbalanced Data Sets](https://www-staff.it.uts.edu.au/~lbcao/publication/IJCNN15.wang.final.pdf)
+* [Transferring Knowledge to smaller network with class-distance loss](https://openreview.net/pdf?id=ByXrfaGFe) [[note](notes/transferring_knowlege_to_smaller_network.md)]
+
+
 
 #### 2017 Sep.
 
 * [You Only Look Once: Unified, Real-Time Object Detection](https://pjreddie.com/media/files/papers/yolo.pdf) [[note](/notes/YOLO.md)]
 * [Generative Adversarial Networks](https://arxiv.org/pdf/1406.2661.pdf) [[note](/notes/GAN.md)]
 * [Synthesizing Normalized Faces from Facial Identity Features](https://arxiv.org/pdf/1701.04851.pdf)
+
+
 
 
 #### 2017 Jul.
