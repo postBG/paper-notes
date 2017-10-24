@@ -65,3 +65,10 @@ Teacher Network(T), Student Network(S)를 각각 f, g라고 하자. (잊을까�
 #### 한계
 
 실험 결과 클래스의 갯수가 작은 경우에만 잘 작동하였다.
+
+
+
+### 느낀점
+
+* Transfer Learning은 그저 Fine-tuning이라고 생각했는데, 이것 또한 나름의 분류가 있다는 점을 새로 배우게 됨
+* Lunit의 논문들을 차례로 읽어볼까 생각이 들었음
