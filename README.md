@@ -15,6 +15,12 @@
 
 
 
+#### 2017 Nov.
+
+* [Style Recognition of Artworks from Convolutional Neural Network Features](https://github.com/jd730/jd730.github.com/blob/master/assets/cv17project.pdf)
+
+
+
 #### 2017 Oct.
 
 * [Training Deep Neural Networks on Imbalanced Data Sets](https://www-staff.it.uts.edu.au/~lbcao/publication/IJCNN15.wang.final.pdf)
