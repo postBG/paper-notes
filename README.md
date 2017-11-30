@@ -13,6 +13,8 @@
 - [Synthesizing Normalized Faces from Facial Identity Features](https://arxiv.org/pdf/1701.04851.pdf)
 - [Show, Attend and Tell: Neural Image Caption Generation with Visual Attention](https://arxiv.org/pdf/1502.03044.pdf)
 - [Show and Tell: A Neural Image Caption Generator](https://arxiv.org/abs/1411.4555)
+- [Recurrent Models of Visual Attention](https://papers.nips.cc/paper/5542-recurrent-models-of-visual-attention.pdf)
+- [Conditional Generative Adversarial Nets](https://arxiv.org/abs/1411.1784)
 
 
 
