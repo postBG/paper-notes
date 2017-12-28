@@ -7,7 +7,6 @@
 ## TODO
 
 - [Improved Techniques for Training GANs](https://arxiv.org/pdf/1606.03498.pdf)
-- [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/pdf/1502.03167.pdf)
 - [Image-to-Image Translation with Conditional Adversarial Networks](https://arxiv.org/pdf/1611.07004v1.pdf)
 - [A Tutorial on Deep Learning for Music Information Retrieval](https://arxiv.org/pdf/1709.04396.pdf)
 - [Synthesizing Normalized Faces from Facial Identity Features](https://arxiv.org/pdf/1701.04851.pdf)
@@ -22,6 +21,7 @@
 #### 2017 Nov.
 
 * [Style Recognition of Artworks from Convolutional Neural Network Features](https://github.com/jd730/jd730.github.com/blob/master/assets/cv17project.pdf)
+* [Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks](https://arxiv.org/abs/1511.06434)
 
 
 
