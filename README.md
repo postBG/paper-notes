@@ -18,10 +18,21 @@
 
 
 
+#### 2018 Jan.
+
+* [Unsupervised Cross-Domain Image Generation](https://arxiv.org/abs/1611.02200)
+
+
+
+#### 2017 Dec.
+
+* [Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks](https://arxiv.org/abs/1511.06434) [[note](notes/DCGAN.md)]
+
+
+
 #### 2017 Nov.
 
 * [Style Recognition of Artworks from Convolutional Neural Network Features](https://github.com/jd730/jd730.github.com/blob/master/assets/cv17project.pdf)
-* [Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks](https://arxiv.org/abs/1511.06434) [[note](notes/DCGAN.md)]
 
 
 
