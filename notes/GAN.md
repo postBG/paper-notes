@@ -8,7 +8,7 @@ G는 random noise로부터 real data와 비슷한 fake data를 generate해 D를 
 
 
 
-![GAN objective function](../assets/GAN/obj.PNG)
+![GAN objective function](../assets/GAN/obj.png)
 
  D(x)를 x가 real일 확률이라고 한다면,
 
