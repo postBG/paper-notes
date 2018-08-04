@@ -25,7 +25,7 @@
 
 
 #### 2018 Aug.
-* [End-to-end Learning of Image based Lane-Change Decision](https://arxiv.org/abs/1706.08211)
+* [End-to-end Learning of Image based Lane-Change Decision](https://arxiv.org/abs/1706.08211) [[note](notes/slcan.md)]
 * [Learning Deep Features for Discriminative Localization](https://arxiv.org/abs/1512.04150)
 
 
