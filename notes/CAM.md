@@ -38,7 +38,48 @@ Oquab *et al*은 GAP대신 Global Max Pooling을 사용하였는데, 이 논문�
 추가적으로 이 논문의 저자들은 이 논문에서 제안하는 방식은 image의 정확히 어떤 region이 discrimination에 중요한 역할을 했는지 강조할 수 있다고 한다.
 
 ## 2. Class Activation Mapping (CAM)
+여기서는 CNN의 GAP를 이용해 *class activation mapping(CAM)*을 만드는 방법을 소개한다.
+한 카테고리에 대한 CAM은 이 카테고리를 인지하는데 사용되는 discriminative image region을 의미한다.
+
+이 논문에서는 NiN이나 GoogLeNet과 같은 Network를 사용했으며, 이 Network는 output layer전까지는 conv layer로 이뤄져 있고, 그 다음 GAP를 거친 결과를 FC에 넣고 Softmax로 output을 만드는 구조이다.
 
 
+![CAM](../assets/CAM/network_structure_and_cam.png)
 
+우선 위에서 말한 연구에 사용된 Network에 대해 몇 가지 식을 정리해보도록 하자.
+GAP(GAP의 입력으로 들어가는 feature map의 갯수는 classification의 category수와 동일)의 입력으로 들어가기 직전의 마지막 conv layer의 k번째 feature map의 (x, y)에서의 activation 값을 다음과 같이 정의하자.
+
+![act](../assets/CAM/activation_eq.png)
+
+한편 GAP는 각 feature map의 activation의 값들을 전부 더해 평균을 낸 것인데, 이를 수식으로 표현하면 아래와 같다.
+
+![GAP](../assets/CAM/GAP.png)
+
+마지막으로 class c의 값을 나타내는 softmax의 입력은 다음과 같이 표현된다.
+
+![GAP](../assets/CAM/input_to_softmax.png)
+
+한편, 이 식은 다음과 같이 바꿔 쓸 수 있다.
+
+![GAP_](../assets/CAM/softmax_input.png)
+
+여기서 CAM ![CAM_def](../assets/CAM/CAM_def.png)를 다음과 같이 정의한다.
+
+![CAM](../assets/CAM/CAM_eq.png)
+
+그러면, 당연히 다음과 같이 ![S_c_def](../assets/CAM/S_c_def.png)를 다시 쓸 수 있다.
+
+![S_c](../assets/CAM/S_c.png)
+
+그렇기 때문에, ![M_c_xy](../assets/CAM/M_c_xy.png)는 image를 class c라고 예측하게 만드는데 (x, y) 위치의 activation이 얼마나 기여를 했는지 직접적으로 나타낸다.
+
+직관적으로, 우리는 각 unit들이 자신의 receptive field에서의 특정한 visual pattern에 반응한다는 것을 알고 있다. 즉, ![act](../assets/CAM/activation_eq.png)는 map of the presence of visual pattern이라고 볼 수 있다.
+그렇다면 CAM은 Fig. 2에서 볼 수 있듯이 특정 위치(= (x, y) 위치의 receptive field 정도로 해석하면 될 듯)에서의  weighted linear sum of the presence of visual patterns로 해석할 수 있다.
+그렇기 때문에, CAM을 input image size로 upsampling하므로써 해당 클래스와 가장 큰 관련성을 가진 지역을 Fig. 3과 같이 확인할 수 있다.
+
+![CAM_vis](../assets/CAM/CAM_vis.png)
+
+### Global Average Pooling (GAP) vs Global Max Pooling (GMP)
+GAP와 GMP를 사용했을 때의 차이점을 간단히 살펴보자.
+저자들은 GAP를 사용하면, loss를 줄이기 위해 관련된 모든 discriminative한 영역을 찾으려 할 것이므로 GMP에 비해 full extent에 더 가까운 영역을 본다고 해석했다.
 
