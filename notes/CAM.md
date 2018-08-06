@@ -83,3 +83,9 @@ GAP(GAP의 입력으로 들어가는 feature map의 갯수는 classification의 
 GAP와 GMP를 사용했을 때의 차이점을 간단히 살펴보자.
 저자들은 GAP를 사용하면, loss를 줄이기 위해 관련된 모든 discriminative한 영역을 찾으려 할 것이므로 GMP에 비해 full extent에 더 가까운 영역을 본다고 해석했다.
 
+## Weakly-supervised Object Localization
+여기서는 CAM의 localization ability를 측정해보는 과정을 담았다.
+포인트는 localization 능력을 학습하기 위해 classification 능력을 크게 훼손하지 않는 것이다.
+
+### 3.1 Setup
+앞에서 언급한 것과 같이 여러 종류의 CNN(AlexNet, VGG, GoogLeNet)의 FC를 제거하고, fully-connected softmax layer와 연결된 GAP를 추가한 network를 사용했다.
