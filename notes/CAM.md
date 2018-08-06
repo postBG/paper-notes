@@ -8,7 +8,7 @@ NiN 논문에서의 GAP는 regularize의 방도로 제안되었지만, 이 논�
 ## 1. Introduction
 [Object Detectors Emerge in Deep Scene CNNs](https://arxiv.org/abs/1412.6856)에서 CNN의 convolutional unit들이 location에 대한 정보없이도 object detector로써의 역할을 하고 있음을 보였다. 하지만 이런 정보들은 FC를 통과하면서 유실되게 된다.
 다른 한편 NiN과 GoogLeNet의 저자들은 FC를 사용하지 않으므로써 parameter의 수를 줄이는 방법을 제안하였다.
-이때, NiN의 저자들은 GAP라는 것을 제안하는데, 이는 FC의 많던 parameter의 수에 비해 상대적으로 적은 수의 parameter를 가지게 된 NiN이 overfitting이 되는 문제를 해결하기 위해서이다.(즉, regularization의 용도로 제안하였다.)
+이때, NiN의 저자들은 GAP라는 것을 제안하는데, 기존의 FC layer가 해석하기 어려우며, 동시에 쉽게 Overfitting되는 문제를 해소하기 위해서였다.(즉, regularizer를 위해 도입)
 
 한편 이 논문의 저자들은 이 GAP의 약간의 변형을 가하는 것만으로 final layer까지 앞서 말한 Network의 localization정보를 유지할 수 있음을 알게 되었다. 즉, 아래의 Fig. 1과 같이 classification을 위해 학습된 Network가 classification에 중요한(예를 들면, 양치질의 칫솔) 부분을 localization하고 있음을 알 수 있다.
 

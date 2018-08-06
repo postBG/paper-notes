@@ -22,13 +22,13 @@
 * [Object Detectors Emerge in Deep Scene CNNs](https://arxiv.org/abs/1412.6856)
 * [Hide-and-Seek: Forcing a Network to be Meticulous for Weakly-supervised Object and Action Localization](https://arxiv.org/abs/1704.04232)
 * [Weakly Supervised Action Localization by Sparse Temporal Pooling Network](https://arxiv.org/abs/1712.05080)
-* [Network in Network](https://arxiv.org/pdf/1312.4400.pdf)
 * [Looking at Vehicles on the Road: A Survey of Vision-Based Vehicle Detection, Tracking, and Behavior Analysis](https://ieeexplore.ieee.org/document/6563169/?denied)
 
 
 #### 2018 Aug.
 * [End-to-end Learning of Image based Lane-Change Decision](https://arxiv.org/abs/1706.08211) [[note](notes/slcan.md)]
 * [Learning Deep Features for Discriminative Localization](https://arxiv.org/abs/1512.04150)
+* [Network in Network](https://arxiv.org/pdf/1312.4400.pdf)
 
 
 #### 2018 Jul.
