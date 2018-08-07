@@ -127,6 +127,13 @@ top1, top2 class에 대해서는 각각 tight, loose한 Bounding Box를 잡고, 
 ## 4. Deep Features for Generic Localization
 이 절의 목적은 GAP CNN들에서 학습된 feature들도 generic feature로써 여러 태스크에 사용될 수 있고, 나아가 categorization에 중요하게 기여된 discriminative image region을 알아내도록 학습시키지 않았음에도 불구하고 이를 알아낼 수도 있음을 보인다.
 
+여기서의 실험 GAP의 output을 이용해, SVM을 학습시키는 방식으로 했으며, Tbl. 5와 같이 AlexNet의 fc7, GoogLeNet의 ave pool, GoogLeNet-GAP의 gap 값을 이용해 여러 scene and object classification 데이터로 실험했다.
+![tbl5](../assets/CAM/tbl5.png)
+
+보다시피 결과가 좋고...또 아래 사진과 같이 discriminative region을 잘 구별하고 있음도 확인할 수 있다.
+![](../assets/CAM/scene.png)
+
+
 
 
 
