@@ -2,13 +2,13 @@
 
 ## Abstract
 이 논문은 [Network in Network](https://arxiv.org/pdf/1312.4400.pdf)에서 소개된 Global Average Pooling(이하 GAP)을 재조명하고, 이것이 어떻게 CNN으로 하여금 image-level labels만을 가지고도 훌륭한 localization ability를 갖출 수 있도록 했는지 다룬다.
-NiN 논문에서의 GAP는 regularize의 방도로 제안되었지만, 이 논문의 저자들은 GAP가 여러 다른 task들에 사용될 수 있는 *generic localizable deep representation*을 만드는 데에도 기여한다는 것을 밝힌다.
+NIN 논문에서의 GAP는 regularize의 방도로 제안되었지만, 이 논문의 저자들은 GAP가 여러 다른 task들에 사용될 수 있는 *generic localizable deep representation*을 만드는 데에도 기여한다는 것을 밝힌다.
 앞으로도 계속 강조되지만, 이 저자들은 자신들이 제안하는 Network가 localization을 위해 학습된 것이 아님에도 불구하고, discriminative image region(discriminative라는 단어는 아마도 image를 discimination할 때, 가장 큰 영향을 주는 부분이라는 것에서 비롯된 듯 함)을 localize하는 능력이 있음을 보여준다.
 
 ## 1. Introduction
 [Object Detectors Emerge in Deep Scene CNNs](https://arxiv.org/abs/1412.6856)에서 CNN의 convolutional unit들이 location에 대한 정보없이도 object detector로써의 역할을 하고 있음을 보였다. 하지만 이런 정보들은 FC를 통과하면서 유실되게 된다.
-다른 한편 NiN과 GoogLeNet의 저자들은 FC를 사용하지 않으므로써 parameter의 수를 줄이는 방법을 제안하였다.
-이때, NiN의 저자들은 GAP라는 것을 제안하는데, 기존의 FC layer가 해석하기 어려우며, 동시에 쉽게 Overfitting되는 문제를 해소하기 위해서였다.(즉, regularizer를 위해 도입)
+다른 한편 NIN과 GoogLeNet의 저자들은 FC를 사용하지 않으므로써 parameter의 수를 줄이는 방법을 제안하였다.
+이때, NIN의 저자들은 GAP라는 것을 제안하는데, 기존의 FC layer가 해석하기 어려우며, 동시에 쉽게 Overfitting되는 문제를 해소하기 위해서였다.(즉, regularizer를 위해 도입)
 
 한편 이 논문의 저자들은 이 GAP의 약간의 변형을 가하는 것만으로 final layer까지 앞서 말한 Network의 localization정보를 유지할 수 있음을 알게 되었다. 즉, 아래의 Fig. 1과 같이 classification을 위해 학습된 Network가 classification에 중요한(예를 들면, 양치질의 칫솔) 부분을 localization하고 있음을 알 수 있다.
 
@@ -89,3 +89,46 @@ GAP와 GMP를 사용했을 때의 차이점을 간단히 살펴보자.
 
 ### 3.1 Setup
 앞에서 언급한 것과 같이 여러 종류의 CNN(AlexNet, VGG, GoogLeNet)의 FC를 제거하고, fully-connected softmax layer와 연결된 GAP를 추가한 network를 사용했다.
+
+저자들은 network의 localization ability가 GAP의 입력으로 들어가는 Conv layer의 spatial resolution이 크면, 더 좋다는 점을 발견해서 이를 *mapping resolution*이라고 명명하고 실험에 적용하였다.
+예를 들면, AlexNet의 경우 conv5이후를 제거해 feature map의 크기를 13x13으로 유지하였고, VGG의 경우도 conv5-3이후를 제거해 14x14로 유지했다.
+이 *mapping resolution*을 크게 해주는 이유는 다음과 같다. feature map의 크기가 너무 작아지게 되면, 이 feature map의 픽셀 하나가 많은 공간에 대한 정보를 encoding한 상태가 된다. 즉, 그만큼 spatial information이 사라지게 되므로 localization 성능이 좋지 않아진다. 따라서 어느 정도 feature map의 크기를 크게 유지해주는 것이다. 
+그런 뒤에 여기에 3x3, stride 1, pad 1, 1024 units의 conv layer를 붙인 뒤 GAP에 넣었는데, 이 conv layer는 feature map의 크기는 그대로 유지하고 channel수만 1024로 변형한다.
+그리고 이렇게 만든 AlexNet-GAP, VGGnet-GAP, GoogLeNet-GAP 등을 ImageNet 데이터로 fine tuning 하였다.
+
+Classification 성능을 비교하기 위해서는 AlexNet, VGGnet, GoogLeNet, NIN를 사용했고,
+Localization 성능을 비교하기 위해서는 GoogLeNet과 NIN을 [Deep Inside Convolutional Networks: Visualising Image Classification Models and Saliency Maps](https://arxiv.org/abs/1312.6034)에 소개된 Backprop 방법을 이용했다.
+
+### 3.2 Result
+#### Classification
+![result1](../assets/CAM/result1.png)
+
+위의 테이블과 같이 GAP로 network의 구조를 변경하더라도 크게 성능이 떨어지진 않았다고 주장하고 있다.
+AlexNet-GAP같이 성능이 크게 떨어진 경우는 2개의 conv layer를 GAP 전에 추가하여 다시 높여놨다.
+
+한편 Classification 성능은 Localization의 성능 측정에도 사용되는 값이므로 좋은 성능을 내는 것은 Localization을 위해서라도 중요하다.
+
+#### Localization
+Bounding Box는 CAM을 이용해 간단한 threshold 방식을 heatmap을 잘라서 만들었다고 한다.
+
+1. 일단 CAM 값이 높은 순으로 20%의 region을 자르고,
+2. 저런 region들 중 가장 큰 connected component를 덮는 bounding box를 만든다.
+
+top-5 localization문제에서는 위의 과정을 top 5의 클래스마다 위의 과정을 반복.
+아래 사진은 이렇게 만들어진 Bounding Box의 예시들이다.
+![bbox](../assets/CAM/bbox.png)
+
+Weakly-supervised끼리 비교한 결과를 살펴보면, validation set으로 테스트한 결과 아래와 같이 GoogLeNet-GAP이 가장 성능이 좋았고,
+![result2](../assets/CAM/result2.png)
+
+top1, top2 class에 대해서는 각각 tight, loose한 Bounding Box를 잡고, top3에 대해서는 loose한 Bounding Box를 잡는 휴리스틱을 적용한 GoogLeNet-GAP를 포함해 test set에서 실험해본 결과는 다음과 같다.
+![result3](../assets/CAM/result3.png)
+
+## 4. Deep Features for Generic Localization
+이 절의 목적은 GAP CNN들에서 학습된 feature들도 generic feature로써 여러 태스크에 사용될 수 있고, 나아가 categorization에 중요하게 기여된 discriminative image region을 알아내도록 학습시키지 않았음에도 불구하고 이를 알아낼 수도 있음을 보인다.
+
+
+
+
+
+
