@@ -177,8 +177,20 @@ text가 있는 사진은 SVT dataset, 없는 사진은 SUN dataset에서 random�
 보다시피 질문의 답과 관련된 region에 주목함을 알 수 있다.
 
 ## 5. Visualizing Class-Specific Units
+CNN의 convolutional unit들은 낮은 층에서 높은 층에 걸쳐 concept detector로써 동작한다. 낮은 층의 unit들은 texture나 material같은 low-level concept을 detect하고, 높은 층의 unit들은 scene이나 object처럼 high-level concept들을 detect한다.
+한편, 대부분의 network처럼 여러 층의 layer들을 거치면 한 category를 인지하는데, 이런 unit들이 어떤 중요성을 가지는지 해석하기 어려워진다.
 
+하지만, 이 논문에서 제안한 구조(GAP에 1개의 FC layer followed by softmax)를 사용하면, 이러한 unit들의 중요도를 해석하기 쉬워지고, 주어진 class에 대해 가장 discriminative한 unit들을 알 수 있다.
+이 논문에선 이를 *class-specific unit*이라고 정의하고 이를 visualize해서 이 class-specific unit들이 원래 사진의 어느 부분을 보는지 확인했다. 그 결과는 아래와 같다.
 
+보다시피, lakeland terrier를 구별할 때는 개의 얼굴이나 털 부분이 중요하고, livingroom을 구별할 때는, 소파나 벽난로 등이 중요함을 알 수 있다.
 
+![csu](../assets/CAM/csu.png)
+
+저자들은 이를 통해 CNN이 사실 이런 class-specific unit들의 bag of words로써 동작한다고 하였다.
+즉, class-specific unit들의 combination이 사진을 classify하게 된다는 것이다.
+
+## 6. 느낀점
+이 논문을 읽으면서 좋긴한데, 항상 GAP를 포함하는 형태의 network만을 사용할 수 있다는 점이 부족해보였다.
 
 
