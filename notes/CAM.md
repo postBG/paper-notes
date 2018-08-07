@@ -125,7 +125,7 @@ top1, top2 class에 대해서는 각각 tight, loose한 Bounding Box를 잡고, 
 ![result3](../assets/CAM/result3.png)
 
 ## 4. Deep Features for Generic Localization
-이 절의 목적은 GAP CNN들에서 학습된 feature들도 generic feature로써 여러 태스크에 사용될 수 있고, 나아가 categorization에 중요하게 기여된 discriminative image region을 알아내도록 학습시키지 않았음에도 불구하고 이를 알아낼 수도 있음을 보인다.
+이 섹션에서의 목적은 GAP CNN들에서 학습된 feature들도 generic feature로써 여러 태스크에 사용될 수 있고, 나아가 categorization에 중요하게 기여된 discriminative image region을 알아내도록 학습시키지 않았음에도 불구하고 이를 알아낼 수도 있음을 보인다.
 
 여기서의 실험 GAP의 output을 이용해, SVM을 학습시키는 방식으로 했으며, Tbl. 5와 같이 AlexNet의 fc7, GoogLeNet의 ave pool, GoogLeNet-GAP의 gap 값을 이용해 여러 scene and object classification 데이터로 실험했다.
 ![tbl5](../assets/CAM/tbl5.png)
@@ -133,7 +133,50 @@ top1, top2 class에 대해서는 각각 tight, loose한 Bounding Box를 잡고, 
 보다시피 결과가 좋고...또 아래 사진과 같이 discriminative region을 잘 구별하고 있음도 확인할 수 있다.
 ![](../assets/CAM/scene.png)
 
+### 4.1 Fine-grained Recognition
+CUB200 데이터셋을 이용하여 실험하였고, 결과는 아래의 표와 같다.
+![cub](../assets/CAM/cub_result.png)
 
+여기서 *GoogLeNet-GAP on full image*는 CUB200 데이터셋의 사진만으로 GAP features를 뽑아 SVM을 학습시킨 결과이고, *GoogLeNet-GAP on BBox*는 CUB200에 포함되어 있는 BBox내부의 사진만을 이용해 GAP features를 뽑아 SVM을 학습시키고 테스트한 결과이다. 보다시피 Accuracy에 7% 이상의 차이가 있는데, Annotation을 사용하지 않고, 위에서 설명한 CAM의 값에 threshold를 적용해 BBox를 만들고, 그 영역을 Crop하여 GAP feature를 뽑아 SVM을 학습시킨 결과 5%정도의 성능 향상을 가졌다.
+
+이는 곧 CAM의 localization 능력을 증명하는 것이기도 하다. 
+fine-grained recognition에서는 카테고리간의 차이가 미묘하기 때문에 localization ability가 특히 중요한데, CAM은 이러한 상황에 도움을 준다.
+![fig8](../assets/CAM/fig8.png)
+
+### 4.2 Pattern Discovery
+이 섹션에서 이 기술이 image에서 단순한 object를 넘어서는 텍스트나 high-level concept 같은 공통적인 속성이나 패턴을 찾아낼 수 있는지에 대해 확인해본다.
+
+여기서도 앞의 실험과 비슷한 방식으로 Linear SVM을 GAP feature로 학습시키고, CAM을 이용해 Network가 어느 부분을 중요하게 여겼는지 확인해본다.
+
+#### Discovering informative objects in the scenes
+즉, scene을 이해하는데 중요한 object들을 얼마나 잘 구별해내는지 확인하는 실험이다.
+SUN dataset(이 데이터셋은 scene의 사진과 그 안에 있는 사물들의 annotation들로 이뤄져있다.)을 이용해 classification을 학습시키고 아래와 같이 informative object에 대한 concept을 학습했는지 확인한다.
+
+GAP feature가 informative object를 잘 구별해내는지 확인하기 위해 각 scene category마다 가장 자주 등장하는 object 6개와 CAM을 이용한 heatmap과 가장 많이 겹치는 사물 6개를 뽑아 비교했다.
+![scene_obj](../assets/CAM/scene_obj.png)
+위의 사진을 보면 알 수 있듯이 informative object들이 다 말이 된다.(심지어 frequent object와 비교해서 더 유의미해보임)
+
+#### Concept localization in weakly labeled images
+마찬가지로 weakly labeled된 이미지에서 Concept을 배울 수 있는 지 확인해보는 실험이다.
+
+데이터셋은 사진과 concept이 잘 맞는 케이스와 random하게 조합된 케이스를 가지고 classification을 학습시킨 후, CAM을 이용해 어느 부분을 중요하게 여기는지 시각화해보는 실험이며, 결과는 아래의 사진과 같다.
+![concept](../assets/CAM/weakly_concept.png)
+
+보다시피 classification만으로 mirror in lake라는 문장처럼 모호한 표현을 잘 이해하게 되었음을 알 수 있다.
+
+#### Weakly supervised text detector
+사진에 text가 포함되어 있는지, text가 있다면 어디에 있는지를 학습할 수 있는지 확인해본 실험이다.
+text가 있는 사진은 SVT dataset, 없는 사진은 SUN dataset에서 random으로 가져왔고 역시 classification으로 학습시킨 뒤 CAM을 이용해 heatmap을 그려보았다. 결과는 아래와 같다.
+![text](../assets/CAM/text.png)
+
+결과는 역시 classification 만으로 학습시켰음에도 불구하고 정확히 text의 위치를 잡아낸다.
+
+#### Interpreting visual question answering
+이 논문에서 제안한 GAP를 이용하여 만든 deep feature가 visual question answering에도 잘 동작하는지 확인해보았다.
+![VQA](../assets/CAM/vqa.png)
+보다시피 질문의 답과 관련된 region에 주목함을 알 수 있다.
+
+## 5. Visualizing Class-Specific Units
 
 
 
