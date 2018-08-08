@@ -27,8 +27,9 @@
 
 #### 2018 Aug.
 * [End-to-end Learning of Image based Lane-Change Decision](https://arxiv.org/abs/1706.08211) [[note](notes/slcan.md)]
-* [Learning Deep Features for Discriminative Localization](https://arxiv.org/abs/1512.04150)
+* [Learning Deep Features for Discriminative Localization](https://arxiv.org/abs/1512.04150) [[note](notes/CAM.md)]
 * [Network in Network](https://arxiv.org/pdf/1312.4400.pdf)
+* [Deep Inside Convolutional Networks: Visualising Image Classification Models and Saliency Maps](https://arxiv.org/abs/1312.6034) [[simple note](notes/deep_inside_cnn.md)]
 
 
 #### 2018 Jul.
