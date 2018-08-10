@@ -18,7 +18,6 @@
 - [Visualizing and Understanding Recurrent Networks](https://arxiv.org/abs/1506.02078)
 
 #### This month
-* [Is object localization for free? - Weakly-supervised learning with convolutional neural network](https://ieeexplore.ieee.org/document/7298668/)
 * [Object Detectors Emerge in Deep Scene CNNs](https://arxiv.org/abs/1412.6856)
 * [Hide-and-Seek: Forcing a Network to be Meticulous for Weakly-supervised Object and Action Localization](https://arxiv.org/abs/1704.04232)
 * [Weakly Supervised Action Localization by Sparse Temporal Pooling Network](https://arxiv.org/abs/1712.05080)
@@ -30,6 +29,7 @@
 * [Learning Deep Features for Discriminative Localization](https://arxiv.org/abs/1512.04150) [[note](notes/CAM.md)]
 * [Network in Network](https://arxiv.org/pdf/1312.4400.pdf)
 * [Deep Inside Convolutional Networks: Visualising Image Classification Models and Saliency Maps](https://arxiv.org/abs/1312.6034) [[simple note](notes/deep_inside_cnn.md)]
+* [Is object localization for free? - Weakly-supervised learning with convolutional neural network](https://ieeexplore.ieee.org/document/7298668/)
 
 
 #### 2018 Jul.
