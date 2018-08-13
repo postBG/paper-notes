@@ -22,6 +22,8 @@
 * [Hide-and-Seek: Forcing a Network to be Meticulous for Weakly-supervised Object and Action Localization](https://arxiv.org/abs/1704.04232)
 * [Weakly Supervised Action Localization by Sparse Temporal Pooling Network](https://arxiv.org/abs/1712.05080)
 * [Looking at Vehicles on the Road: A Survey of Vision-Based Vehicle Detection, Tracking, and Behavior Analysis](https://ieeexplore.ieee.org/document/6563169/?denied)
+* [Weakly Supervised Deep Detection Networks](https://arxiv.org/abs/1511.02853)
+* [Multiple Instance Detection Network with Online Instance Classifier Refinement](https://arxiv.org/abs/1704.00138)
 
 
 #### 2018 Aug.
