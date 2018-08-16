@@ -21,7 +21,6 @@
 * [Object Detectors Emerge in Deep Scene CNNs](https://arxiv.org/abs/1412.6856)
 * [Weakly Supervised Action Localization by Sparse Temporal Pooling Network](https://arxiv.org/abs/1712.05080)
 * [Looking at Vehicles on the Road: A Survey of Vision-Based Vehicle Detection, Tracking, and Behavior Analysis](https://ieeexplore.ieee.org/document/6563169/?denied)
-* [Weakly Supervised Deep Detection Networks](https://arxiv.org/abs/1511.02853)
 * [Multiple Instance Detection Network with Online Instance Classifier Refinement](https://arxiv.org/abs/1704.00138)
 
 
@@ -32,6 +31,7 @@
 * [Deep Inside Convolutional Networks: Visualising Image Classification Models and Saliency Maps](https://arxiv.org/abs/1312.6034) [[simple note](notes/deep_inside_cnn.md)]
 * [Is object localization for free? - Weakly-supervised learning with convolutional neural network](https://ieeexplore.ieee.org/document/7298668/)
 * [Hide-and-Seek: Forcing a Network to be Meticulous for Weakly-supervised Object and Action Localization](https://arxiv.org/abs/1704.04232) [[simple note](notes/HaS.md)]
+* [Weakly Supervised Deep Detection Networks](https://arxiv.org/abs/1511.02853)
 
 
 #### 2018 Jul.

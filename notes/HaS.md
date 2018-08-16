@@ -22,4 +22,4 @@ network가 highly-discriminative parts만으로도 classification이 가능했�
 * Input Layer에 dropout을 쓰면 잘 안됨. 저자들이 말하기는 drop시킨다고 해도, highly discriminative한 영역이 높은 확률로 보이기 때문이라고 한다. (예를 들어, RGB 값이 일정 영역에 전부 사라지는 경우는 적으니, 색이 좀 변하더라도 형태등은 보인다.)
 
 ### 아쉬운 점
-* HaS에서 patch들이 hide될 확률을 높이면, classification 성능이 떨어져서 Localization 성능이 떨어지는 문제가 있다. 반면에 patch들의 hide될 확률을 낮추면, classification 성능은 높아지지만, 동시에 highly discriminative한 영역에만 의존하는 경향이 높아지므로 또 다시 Localization 성능이 떨어진다. 중간에 적정한 값을 찾아야한다.
+* HaS에서 patch들이 hide될 확률을 높이면, classification 성능이 떨어져서 Localization 성능이 떨어지는 문제가 있다. 반면에 patch들의 hide될 확률을 낮추면, classification 성능은 높아지지만, 동시에 highly discriminative한 영역에만 의존하는 경향이 높아지므로 또 다시 Localization 성능이 떨어진다. 중간에 적정한 값을 찾아야한다.	
