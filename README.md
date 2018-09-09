@@ -18,10 +18,14 @@
 - [Visualizing and Understanding Recurrent Networks](https://arxiv.org/abs/1506.02078)
 
 #### This month
-* [Weakly Supervised Action Localization by Sparse Temporal Pooling Network](https://arxiv.org/abs/1712.05080)
 * [Looking at Vehicles on the Road: A Survey of Vision-Based Vehicle Detection, Tracking, and Behavior Analysis](https://ieeexplore.ieee.org/document/6563169/?denied)
 * [Multiple Instance Detection Network with Online Instance Classifier Refinement](https://arxiv.org/abs/1704.00138)
 
+
+#### 2018 Sep.
+* [Weakly Supervised Action Localization by Sparse Temporal Pooling Network](https://arxiv.org/abs/1712.05080)
+* [Two-Stream Convolutional Networks for Action Recognition in Videos](https://arxiv.org/abs/1406.2199)
+* [Tell Me When to Change Lanes: Learning to interpret side-rear view]()
 
 #### 2018 Aug.
 * [End-to-end Learning of Image based Lane-Change Decision](https://arxiv.org/abs/1706.08211) [[note](notes/slcan.md)]
