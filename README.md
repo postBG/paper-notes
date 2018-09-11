@@ -14,18 +14,19 @@
 - [Recurrent Models of Visual Attention](https://papers.nips.cc/paper/5542-recurrent-models-of-visual-attention.pdf)
 - [Conditional Generative Adversarial Nets](https://arxiv.org/abs/1411.1784)
 - [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
-- [Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385)
 - [Visualizing and Understanding Recurrent Networks](https://arxiv.org/abs/1506.02078)
 
 #### This month
 * [Looking at Vehicles on the Road: A Survey of Vision-Based Vehicle Detection, Tracking, and Behavior Analysis](https://ieeexplore.ieee.org/document/6563169/?denied)
 * [Multiple Instance Detection Network with Online Instance Classifier Refinement](https://arxiv.org/abs/1704.00138)
+* [Large Scale Distributed Deep Networks](https://ai.google/research/pubs/pub40565)
 
 
 #### 2018 Sep.
 * [Weakly Supervised Action Localization by Sparse Temporal Pooling Network](https://arxiv.org/abs/1712.05080)
 * [Two-Stream Convolutional Networks for Action Recognition in Videos](https://arxiv.org/abs/1406.2199)
 * [Tell Me When to Change Lanes: Learning to interpret side-rear view]()
+* [What do Deep Networks Like to See?](https://arxiv.org/abs/1803.08337)
 
 #### 2018 Aug.
 * [End-to-end Learning of Image based Lane-Change Decision](https://arxiv.org/abs/1706.08211) [[note](notes/slcan.md)]
