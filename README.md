@@ -27,6 +27,7 @@
 * [Two-Stream Convolutional Networks for Action Recognition in Videos](https://arxiv.org/abs/1406.2199)
 * [Tell Me When to Change Lanes: Learning to interpret side-rear view]()
 * [What do Deep Networks Like to See?](https://arxiv.org/abs/1803.08337)
+* [Prototypical Networks for Few-shot Learning](https://arxiv.org/abs/1703.05175)
 
 #### 2018 Aug.
 * [End-to-end Learning of Image based Lane-Change Decision](https://arxiv.org/abs/1706.08211) [[note](notes/slcan.md)]
