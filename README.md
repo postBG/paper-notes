@@ -18,6 +18,7 @@
 * [Overcoming catastrophic forgetting in neural networks](https://arxiv.org/abs/1612.00796)
 * [Squeeze-and-Excitation Networks](https://arxiv.org/abs/1709.01507)
 * [Cross-Domain Self-supervised Multi-task Feature Learning using Synthetic Imagery](https://arxiv.org/abs/1711.09082)
+* [Continual Learning with Deep Generative Replay](https://arxiv.org/abs/1705.08690)
 
 #### 2018 Sep.
 * [Weakly Supervised Action Localization by Sparse Temporal Pooling Network](https://arxiv.org/abs/1712.05080)
