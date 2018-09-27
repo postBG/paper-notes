@@ -8,26 +8,26 @@
 
 - [Improved Techniques for Training GANs](https://arxiv.org/pdf/1606.03498.pdf)
 - [Image-to-Image Translation with Conditional Adversarial Networks](https://arxiv.org/pdf/1611.07004v1.pdf)
-- [A Tutorial on Deep Learning for Music Information Retrieval](https://arxiv.org/pdf/1709.04396.pdf)
-- [Synthesizing Normalized Faces from Facial Identity Features](https://arxiv.org/pdf/1701.04851.pdf)
 - [Show, Attend and Tell: Neural Image Caption Generation with Visual Attention](https://arxiv.org/pdf/1502.03044.pdf)
 - [Recurrent Models of Visual Attention](https://papers.nips.cc/paper/5542-recurrent-models-of-visual-attention.pdf)
-- [Conditional Generative Adversarial Nets](https://arxiv.org/abs/1411.1784)
 - [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
-- [Visualizing and Understanding Recurrent Networks](https://arxiv.org/abs/1506.02078)
 
 #### This month
 * [Looking at Vehicles on the Road: A Survey of Vision-Based Vehicle Detection, Tracking, and Behavior Analysis](https://ieeexplore.ieee.org/document/6563169/?denied)
-* [Multiple Instance Detection Network with Online Instance Classifier Refinement](https://arxiv.org/abs/1704.00138)
 * [Large Scale Distributed Deep Networks](https://ai.google/research/pubs/pub40565)
-
+* [Overcoming catastrophic forgetting in neural networks](https://arxiv.org/abs/1612.00796)
+* [Squeeze-and-Excitation Networks](https://arxiv.org/abs/1709.01507)
+* [Cross-Domain Self-supervised Multi-task Feature Learning using Synthetic Imagery](https://arxiv.org/abs/1711.09082)
 
 #### 2018 Sep.
 * [Weakly Supervised Action Localization by Sparse Temporal Pooling Network](https://arxiv.org/abs/1712.05080)
 * [Two-Stream Convolutional Networks for Action Recognition in Videos](https://arxiv.org/abs/1406.2199)
+* [Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset](https://arxiv.org/abs/1705.07750)
 * [Tell Me When to Change Lanes: Learning to interpret side-rear view]()
 * [What do Deep Networks Like to See?](https://arxiv.org/abs/1803.08337)
 * [Prototypical Networks for Few-shot Learning](https://arxiv.org/abs/1703.05175)
+* [Multiple Instance Detection Network with Online Instance Classifier Refinement](https://arxiv.org/abs/1704.00138)
+* [Boosting Self-Supervised Learning via Knowledge Transfer](https://arxiv.org/abs/1805.00385)
 
 #### 2018 Aug.
 * [End-to-end Learning of Image based Lane-Change Decision](https://arxiv.org/abs/1706.08211) [[note](notes/slcan.md)]
