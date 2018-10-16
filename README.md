@@ -17,8 +17,19 @@
 * [Large Scale Distributed Deep Networks](https://ai.google/research/pubs/pub40565)
 * [Overcoming catastrophic forgetting in neural networks](https://arxiv.org/abs/1612.00796)
 * [Squeeze-and-Excitation Networks](https://arxiv.org/abs/1709.01507)
-* [Cross-Domain Self-supervised Multi-task Feature Learning using Synthetic Imagery](https://arxiv.org/abs/1711.09082)
 * [Continual Learning with Deep Generative Replay](https://arxiv.org/abs/1705.08690)
+
+
+
+#### 2018. Oct.
+
+- [Cross-Domain Self-supervised Multi-task Feature Learning using Synthetic Imagery](https://arxiv.org/abs/1711.09082)
+- [Mix-and-Match Tuning for Self-Supervised Semantic Segmentation](https://arxiv.org/abs/1712.00661)
+- [CyCADA: Cycle-Consistent Adversarial Domain Adaptation](https://arxiv.org/abs/1711.03213)
+- [Learning to Adapt Structured Output Space for Semantic Segmentation](https://arxiv.org/abs/1802.10349)
+- [Adversarial Discriminative Domain Adaptation](https://arxiv.org/abs/1702.05464)
+
+
 
 #### 2018 Sep.
 * [Weakly Supervised Action Localization by Sparse Temporal Pooling Network](https://arxiv.org/abs/1712.05080)
